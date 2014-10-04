@@ -1,0 +1,2 @@
+module RentReceiptsHelper
+end
