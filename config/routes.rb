@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'homes/index'
 
-  get 'rent_receipts/index'
+  devise_for :users, ActiveAdmin::Devise.config
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  # get 'homes/index'
+
+  get 'rent_receipts/:year/:month/:id' => 'rent_receipts#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,6 +14,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root 'homes#index'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -32,6 +38,7 @@ Rails.application.routes.draw do
   #   end
 
 resources :rent_receipts
+resources :houses
 
   # Example resource route with sub-resources:
   #   resources :products do

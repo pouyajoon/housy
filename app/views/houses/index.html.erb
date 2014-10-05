@@ -1,0 +1,4 @@
+<h1>Houses</h1>
+<% @houses.each do |h| %>
+<a href="<%=house_path h.id%>"><%= h.address%></a>
+<%end%>

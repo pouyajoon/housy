@@ -1,3 +1,69 @@
 // Place all the styles related to the rent_receipts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1.title{
+  text-align: center;
+  color:white;
+  height: 120px;
+  line-height: 120px;
+  background-color: #F5881F;
+  margin: 0;
+  padding:5px;
+}
+body{
+  // margin:0;
+  // padding:0;
+  font-family: 'Helvetica', 'Arial';
+}
+
+div.main-text{
+  margin: 40px 0;
+}
+
+// h2, h3{
+//   color:#8F9094;
+// }
+
+.cost-zone{
+  text-align: right;
+  width:120px;
+  &.total{
+    font-weight: bold;
+  }
+}
+
+h2.sub-title{
+  color:#F5881F;
+}
+
+div.signature{
+  text-align: right;
+  margin-top: 50px;
+}
+
+
+h2.month{
+  text-align: right;
+}
+
+
+table.payment{
+  width: 100%;
+  th,td{
+    padding: 5px;
+    width: 50%;
+  }
+  th{
+    text-align: right;
+    padding-right: 10px;
+    color:#F5881F;
+  }
+  td{
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+div.warning{
+  text-align: center;
+  font-style:italic;
+}

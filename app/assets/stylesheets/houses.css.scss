@@ -1,0 +1,35 @@
+// Place all the styles related to the houses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.months{
+  color:#F5881F;
+}
+
+
+table.months{
+  width:100%;
+
+  font-size: 1.2em;
+  border-collapse: collapse;
+  
+tr{
+  border-bottom: 1px solid #F5881F;
+  height: 48px;
+}
+
+td, th{
+    padding: 5px;
+}
+
+  tr:hover{
+    background-color: #F5881F;    
+    td:nth-child(2), td:nth-child(3) , td:nth-child(4){
+      opacity: 1;
+    }
+  }
+  td:nth-child(2), td:nth-child(3) , td:nth-child(4){
+    text-align: center;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,24 @@
+<h1 class="months"><%=@h.address%></h1>
+
+
+<table class="months">
+  <tr>
+    <th>Mois</th>
+    <th>Voir HTML</th>
+    <th>Voir PDF</th>
+    <th>Envoyer par e-mail</th>
+  </tr>
+<% @months.each do |m| %>
+  <tr>
+      <td><%= m.name%></td>
+      <td><a href="<%=m.link%>">Voir HTML</a></td>
+      <td><a href="<%=m.link%>.pdf">Voir PDF</a></td>
+      <td>Envoyer par e-mail</td>
+  </tr>
+<%end%>
+
+</table>
+
+
+
+

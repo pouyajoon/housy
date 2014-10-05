@@ -1,0 +1,21 @@
+
+
+<%= wicked_pdf_stylesheet_link_tag "rent_receipts" -%>
+<h1 class='title'>QUITTANCE DE LOYER</h1>
+<h2 class="month">Loyer pour <%=@month%> <%=@year%></h2>
+<!-- <p>Quittance de </p> -->
+<p>Adresse de la location</p>
+<h2 class="address sub-title"><%=@h.address%></h2>
+<div class="main-text">Je soussigné <%=@h.owner%>, propriétaire du logement désigné ci-dessus, déclare avoir reçu la somme de 1000.00€ (mille euros) de la part de <%=@h.occupants%>, au titre du paiement du loyer et des charges pour la période de location du <%=@month_start%> au <%=@month_end%> et lui en donne quittance, sous réserve de tous mes droits.</div>
+<h3 class="sub-title">Détail du règlement</h3>
+<table class="payment">
+  
+  <tr> <th>Loyer</th><td><div class="cost-zone"><%=@h.rent%> €</div></td>  </tr>
+  <tr> <th>Provision pour charges</th><td> <div class="cost-zone">  <%=@h.apartment_costs%> €</div></td>  </tr>
+  <tr> <th>Total du loyer</th><td><div class="cost-zone total"><%=@h.rent + @h.apartment_costs%> €</div></td>  </tr>
+  <tr> <th>Date du paiement</th><td><div class="cost-zone">le <%=@pay_day%></div></td>  </tr>
+</table>
+
+
+<div class="signature">Fait à Paris le <%=@pay_day%><br/><%=@h.owner%></div>
+
