@@ -37,12 +37,13 @@ gem 'spring',        group: :development
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
-
-gem 'formtastic'
-gem 'devise'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'debugger', group: [:development, :test]
 
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
+
+gem 'formtastic'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+
 

@@ -22,12 +22,20 @@ td, th{
     padding: 5px;
 }
 
+  
+
   tr:hover{
     background-color: #F5881F;    
     td:nth-child(2), td:nth-child(3) , td:nth-child(4){
       opacity: 1;
     }
   }
+
+  tr:nth-child(1):hover{
+    // color:white;
+    background-color: white;    
+  }
+
   td:nth-child(2), td:nth-child(3) , td:nth-child(4){
     text-align: center;
     opacity: 0;

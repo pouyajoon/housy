@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/gregbell/active_admin.git
+  remote: git://github.com/activeadmin/activeadmin.git
   revision: 0c83cfe0b9b43a4a27a63c13f27d6682b0ff6cae
   specs:
     activeadmin (1.0.0.pre)
@@ -59,6 +59,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    columnize (0.8.9)
+    debugger (1.6.8)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.5)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.5)
     devise (3.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -174,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   coffee-rails (~> 4.0.0)
+  debugger
   devise
   formtastic
   jbuilder (~> 2.0)
