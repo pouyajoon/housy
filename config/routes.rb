@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # get 'homes/index'
 
   get 'rent_receipts/:year/:month/:id' => 'rent_receipts#show'
+  get 'rent_receipts/:year/:month/:id/email' => 'rent_receipts#email'
+  get 'rent_receipts/:year/:month/:id/attachment' => 'rent_receipts#attachment'
+  get 'rent_receipts/:year/:month/:id/pdf' => 'rent_receipts#pdf'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -37,8 +40,8 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-resources :rent_receipts
-resources :houses
+  resources :rent_receipts
+  resources :houses
 
   # Example resource route with sub-resources:
   #   resources :products do
