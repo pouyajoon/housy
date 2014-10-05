@@ -15,15 +15,15 @@ class RentReceiptsController < ApplicationController
 			format.pdf do
 				render :pdf => "quittance_%d" % @h.id,
 					:disposition => "inline"
-					# :encoding => 'UTF-8',
-					# :layout => 'pdf.html.erb',
-					# :template => "rent_receipts/show.html.erb"
-					# :margin => { :bottom => 30 },
-					# :footer => { :html => {
-					# 							:template => "rent_receipts/footer.html.erb",
-					# 						 	:layout => 'empty.html'
-					# 					 		}
-					# 					 	}
+					:encoding => 'UTF-8',
+					:layout => 'pdf.html.erb',
+					:template => "rent_receipts/show.html.erb"
+					:margin => { :bottom => 30 },
+					:footer => { :html => {
+												:template => "rent_receipts/footer.html.erb",
+											 	:layout => 'empty.html'
+										 		}
+										 	}
 			end
 		end
 	end
