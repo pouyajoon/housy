@@ -5,7 +5,8 @@ class ReceiptMailer < ActionMailer::Base
     @quittance_date = quittance_date
     @h = h
 
-    attachments['quittance.pdf'] = File.read(pdf_url)
+    file_name = 'quittance_%s.pdf' % quittance_date.gsub!(' ', '_')
+    attachments[file_name] = File.read(pdf_url)
 
     mail(from: from, to: to, cc: cc, subject: title)
   end
