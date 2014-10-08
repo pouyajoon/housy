@@ -1,6 +1,4 @@
-class RentReceiptsController < ApplicationController
-
-
+class RentReceiptsController < HousyController
 
 	def get_pdf(mode, action)
 		require 'active_support/core_ext/integer/inflections'

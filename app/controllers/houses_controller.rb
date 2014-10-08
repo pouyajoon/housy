@@ -1,5 +1,5 @@
 
-class Receipt< ApplicationController
+class Receipt< HousyController
   attr_accessor :link, :date, :name
 
   def initialize(h, y, m)
@@ -11,7 +11,7 @@ class Receipt< ApplicationController
 end
 
 
-class HousesController < ApplicationController
+class HousesController < HousyController
   def index
     @houses = House.all
   end
