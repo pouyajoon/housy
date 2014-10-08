@@ -86,13 +86,15 @@ class RentReceiptsController < ApplicationController
 
 		month_date = Time.local(year, m)
 		quittance_date = l(month_date, :format=> '%B %Y').capitalize
+				date_for_file = l(month_date, :format=> '%Y%m').capitalize
+
 		title = "Quittance %s" % quittance_date
 
 		pdf_url = get_pdf("inline", 'file')
 
 
 
-		ReceiptMailer.send_receipt(from, to, cc, pdf_url, title, @h, quittance_date).deliver
+		ReceiptMailer.send_receipt(from, to, cc, pdf_url, title, @h, quittance_date, date_for_file).deliver
 		render :text => 'e-mail envoyé à %s en cc à %s' % [to.to_s, cc.to_s]
 	end
 
