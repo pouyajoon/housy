@@ -1,4 +1,8 @@
 <h1>Houses</h1>
+<ul>
 <% @houses.each do |h| %>
+<li>
 <a href="<%=house_path h.id%>"><%= h.address%></a>
+</li>
 <%end%>
+</ul>

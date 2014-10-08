@@ -8,9 +8,9 @@
 <h3 class="sub-title">Détail du règlement</h3>
 <table class="payment">
   
-  <tr> <th>Loyer</th><td><div class="cost-zone"><%=@h.rent.round(2)%> €</div></td>  </tr>
-  <tr> <th>Provision pour charges</th><td> <div class="cost-zone">  <%=@h.apartment_costs.round(2)%> €</div></td>  </tr>
-  <tr> <th>Total du loyer</th><td><div class="cost-zone total"><%=(@h.rent + @h.apartment_costs).round(2)%> €</div></td>  </tr>
+  <tr> <th>Loyer</th><td><div class="cost-zone"><%=@h.rent_formatted%></div></td>  </tr>
+  <tr> <th>Provision pour charges</th><td> <div class="cost-zone">  <%=@h.apartment_costs_formatted%></div></td>  </tr>
+  <tr> <th>Total du loyer</th><td><div class="cost-zone total"><%=@h.total_rent%></div></td>  </tr>
   <tr> <th>Date du paiement</th><td><div class="cost-zone">le <%=@pay_day%></div></td>  </tr>
 </table>
 <div class="signature">Fait à Paris le <%=@pay_day%><br/><%=@h.owner%></div>
