@@ -23,7 +23,7 @@ class HousesController < HousyController
 
     @months = []
     year = @time.year
-    for y in 2013..2016
+    for y in 2018..2025
       for m in 1..12
         @months.push(Receipt.new(@h, y, m))
       end
