@@ -7,6 +7,8 @@ else
 	exe_path = "/Users/pouya/.rvm/gems/ruby-2.1.1/bin/wkhtmltopdf"
 end
 
+puts exe_path
+
 WickedPdf.config = {
 	#:wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
 	#:layout => "pdf.html",
