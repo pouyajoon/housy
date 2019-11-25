@@ -9,7 +9,7 @@ class RentReceiptsController < HousyController
 		format = '%d/%m/%Y'
 		@month_start = l(@m.at_beginning_of_month, :format=> format)
 		@month_end = l(@m.at_end_of_month, :format=> format)
-		@pay_day = l(Time.local(@year, params[:month], 3), :format=> format)
+		@pay_day = l(Time.local(@year, params[:month], 9), :format=> format)
 
 		# respond_to do |format|
 		# 	format.html
