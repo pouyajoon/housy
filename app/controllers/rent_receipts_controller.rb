@@ -11,6 +11,7 @@ class RentReceiptsController < HousyController
 		@month_end = l(@m.at_end_of_month, :format=> format)
 		@pay_day = l(Time.local(@year, params[:month], 9), :format=> format)
 
+
 		# respond_to do |format|
 		# 	format.html
 		# 	format.pdf do

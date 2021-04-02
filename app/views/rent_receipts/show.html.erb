@@ -7,10 +7,40 @@
 <div class="main-text">Je soussigné <%=@h.owner%>, propriétaire du logement désigné ci-dessus, déclare avoir reçu la somme de <%=@h.total_rent%> de la part de <%=@h.occupants%>, au titre du paiement du loyer et des charges pour la période de location du <%=@month_start%> au <%=@month_end%> et lui en donne quittance, sous réserve de tous mes droits.</div>
 <h3 class="sub-title">Détail du règlement</h3>
 <table class="payment">
-  
-  <tr> <th>Loyer</th><td><div class="cost-zone"><%=@h.rent_formatted%></div></td>  </tr>
-  <tr> <th>Provision pour charges</th><td> <div class="cost-zone">  <%=@h.apartment_costs_formatted%></div></td>  </tr>
-  <tr> <th>Total du loyer</th><td><div class="cost-zone total"><%=@h.total_rent%></div></td>  </tr>
-  <tr> <th>Date du paiement</th><td><div class="cost-zone">le <%=@pay_day%></div></td>  </tr>
+
+    <tr>
+        <th>Loyer</th>
+        <td>
+            <div class="cost-zone"><%=@h.rent_formatted%></div>
+        </td>
+    </tr>
+    <tr>
+        <th>Provision pour charges</th>
+        <td>
+            <div class="cost-zone"> <%=@h.apartment_costs_formatted%></div>
+        </td>
+    </tr>
+    <tr>
+        <th>Total du loyer</th>
+        <td>
+            <div class="cost-zone total"><%=@h.total_rent%></div>
+        </td>
+    </tr>
+    <tr>
+        <th>Date du paiement</th>
+        <td>
+            <div class="cost-zone">le <%=@pay_day%></div>
+        </td>
+    </tr>
 </table>
-<div class="signature">Fait à Paris le <%=@pay_day%><br/><%=@h.owner%></div>
+
+<% unless defined? @h.free_hosting %>
+<p>L'hébérgement est réalisé à titre gratuit.</p>
+<% end %>
+
+
+<div class="signature">Fait à Paris le <%=@pay_day%><br /><%=@h.owner%></div>
+
+<% unless defined? @h.stamp_path %>
+<p>L'hébérgement est réalisé à titre gratuit.</p>
+<% end %>
