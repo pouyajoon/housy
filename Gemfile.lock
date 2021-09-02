@@ -157,7 +157,7 @@ GEM
       activesupport (>= 5.0)
       i18n
       polyamorous (= 2.3.0)
-    rdoc (6.2.0)
+    rdoc (6.3.2)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
